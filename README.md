@@ -118,6 +118,32 @@ https://api.osv.dev
 
 ---
 
+# Screenshots
+
+## Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Upload Page
+
+![Upload](screenshots/upload.png)
+
+---
+
+## Vulnerabilities
+
+![Vulnerabilities](screenshots/vulnerabilities.png)
+
+---
+
 ## Author
 
 Akash Dhar Dubey

@@ -122,25 +122,25 @@ https://api.osv.dev
 
 ## Login Page
 
-![Login](screenshots/login.png)
+![Login](screenshots/login%20page.jpg)
 
 ---
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard%201.jpg)
 
 ---
 
 ## Upload Page
 
-![Upload](screenshots/upload.png)
+![Upload](screenshots/Upload%20Page.jpg)
 
 ---
 
 ## Vulnerabilities
 
-![Vulnerabilities](screenshots/vulnerabilities.png)
+![Vulnerabilities](screenshots/vulnerabilities.jpg)
 
 ---
 

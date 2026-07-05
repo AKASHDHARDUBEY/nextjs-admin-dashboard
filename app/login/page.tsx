@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { loginUser } from "../action/auth";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
     const router = useRouter();
@@ -52,10 +53,28 @@ export default function LoginPage() {
                 <br />
                 <br />
 
-                <button type="submit">
+                <button
+                    type="submit"
+                    style={{
+                        padding: "10px 20px",
+                        background: "red",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                    }}
+                >
                     Login
                 </button>
             </form>
+
+            <p style={{ marginTop: "15px" }}>
+                Don't have an account?{" "}
+                <Link href="/register">
+                    Register
+                </Link>
+            </p>
         </div>
     );
 }

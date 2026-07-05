@@ -1,14 +1,23 @@
 "use client";
 
+import Sidebar from "../dashboard/components/Sidebar";
+import Navbar from "../dashboard/components/Navbar";
+
 export default function UploadPage() {
     return (
-        <div
-            style={{
-                padding: "40px",
-                background: "whitesmoke",
-                minHeight: "100vh",
-            }}
-        >
+        <div style={{ display: "flex", minHeight: "100vh", background: "whitesmoke" }}>
+            <Sidebar />
+
+            <div style={{ flex: 1 }}>
+                <Navbar />
+
+                <div
+                    style={{
+                        padding: "30px",
+                        background: "lightgray",
+                        minHeight: "100vh",
+                    }}
+                >
             <h1>Upload Scan Report</h1>
 
             <div
@@ -45,6 +54,8 @@ export default function UploadPage() {
                 >
                     Upload
                 </button>
+            </div>
+                </div>
             </div>
         </div>
     );

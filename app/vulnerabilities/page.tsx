@@ -1,4 +1,6 @@
 import { getVulnerabilities } from "@/lib/osv";
+import Sidebar from "../dashboard/components/Sidebar";
+import Navbar from "../dashboard/components/Navbar";
 
 type Props = {
   searchParams: Promise<{
@@ -25,13 +27,19 @@ export default async function VulnerabilitiesPage({
     : allVulnerabilities;
 
   return (
-    <div
-      style={{
-        padding: "30px",
-        background: "whitesmoke",
-        minHeight: "100vh",
-      }}
-    >
+    <div style={{ display: "flex", minHeight: "100vh", background: "whitesmoke" }}>
+      <Sidebar />
+
+      <div style={{ flex: 1 }}>
+        <Navbar />
+
+        <div
+          style={{
+            padding: "30px",
+            background: "lightgray",
+            minHeight: "100vh",
+          }}
+        >
       <div
         style={{
           display: "flex",
@@ -177,6 +185,8 @@ export default async function VulnerabilitiesPage({
           ))}
         </tbody>
       </table>
+        </div>
+      </div>
     </div>
   );
 }

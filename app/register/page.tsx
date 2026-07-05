@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { registerUser } from "../action/auth";
+import Link from "next/link";
 
 export default function RegisterPage() {
     const [name, setName] = useState("");
@@ -55,12 +56,30 @@ export default function RegisterPage() {
 
                 <br />
                 <br />
-                <button type="submit">
+                <button
+                    type="submit"
+                    style={{
+                        padding: "10px 20px",
+                        background: "red",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                    }}
+                >
                     Register
                 </button>
 
 
             </form>
+
+            <p style={{ marginTop: "15px" }}>
+                Already have an account?{" "}
+                <Link href="/login">
+                    Login
+                </Link>
+            </p>
         </div>
     );
 

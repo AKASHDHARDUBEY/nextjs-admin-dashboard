@@ -1,27 +1,40 @@
+import Link from "next/link";
+
 export default function Sidebar() {
     return (
         <div
             style={{
-                width: "240px",
+                width: 220,
                 background: "black",
                 color: "white",
+                padding: 20,
                 minHeight: "100vh",
-                padding: "20px",
             }}
         >
-            <h2>Vynox Security</h2>
+            <h2 style={{ marginBottom: 20 }}>Vynox Security</h2>
 
-            <hr />
+            <div style={{ display: "flex", flexDirection: "column", gap: 15 }}>
+                <Link
+                    href="/dashboard"
+                    style={{ color: "white", textDecoration: "none" }}
+                >
+                    Dashboard
+                </Link>
 
-            <p>Dashboard</p>
+                <Link
+                    href="/upload"
+                    style={{ color: "white", textDecoration: "none" }}
+                >
+                    Upload Scan Report
+                </Link>
 
-            <p>Vulnerabilities</p>
-
-            <p>Assets</p>
-
-            <p>Reports</p>
-
-            <p>Settings</p>
+                <Link
+                    href="/vulnerabilities"
+                    style={{ color: "white", textDecoration: "none" }}
+                >
+                    Vulnerabilities
+                </Link>
+            </div>
         </div>
     );
 }

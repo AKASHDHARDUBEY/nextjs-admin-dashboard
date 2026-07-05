@@ -1,32 +1,32 @@
 # Vynox Security Dashboard
 
-## About the Project
+## Overview
 
-This project is a simple cybersecurity dashboard built using Next.js, TypeScript, Prisma, and PostgreSQL.
+Vynox Security Dashboard is a web application built using Next.js, TypeScript, Prisma, and PostgreSQL.
 
-The main purpose of this project is to show vulnerability information in an easy-to-read dashboard. It also connects with the Google OSV API to fetch real vulnerability data based on a package name.
-
-Users can register, log in, view the dashboard, upload a scan report, and search for vulnerabilities.
+The application allows users to register, log in securely, upload vulnerability scan reports, and view security information through a simple dashboard. It also integrates with the Google Open Source Vulnerabilities (OSV) API to search real-world package vulnerabilities.
 
 ---
 
 ## Features
 
-- User Registration
-- User Login and Logout
-- Protected Dashboard
-- Upload Scan Report Page
-- Vulnerability Dashboard
+- Secure user registration and login
+- JWT-based authentication
+- Protected dashboard
+- Upload scan report page
+- Dashboard with vulnerability statistics
+- Recent activity section
+- Severity overview
 - Search vulnerabilities by package name
 - Filter vulnerabilities by severity
 - Google OSV API integration
-- PostgreSQL database using Prisma
+- PostgreSQL database with Prisma ORM
 
 ---
 
-## Technologies Used
+## Tech Stack
 
-- Next.js
+- Next.js (App Router)
 - TypeScript
 - PostgreSQL
 - Prisma ORM
@@ -35,15 +35,33 @@ Users can register, log in, view the dashboard, upload a scan report, and search
 
 ---
 
-## How to Run the Project
+## Project Structure
+
+```
+app/
+ ├── dashboard/
+ ├── login/
+ ├── register/
+ ├── upload/
+ ├── vulnerabilities/
+ ├── api/
+
+lib/
+prisma/
+public/
+```
+
+---
+
+## Installation
 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-link>
+git clone https://github.com/your-username/vuln-dashboard.git
 ```
 
-### 2. Go to the project folder
+### 2. Open the project
 
 ```bash
 cd vuln-dashboard
@@ -57,8 +75,6 @@ npm install
 
 ### 4. Create a `.env` file
 
-Add your database URL and JWT secret.
-
 ```env
 DATABASE_URL=your_database_url
 JWT_SECRET=your_secret_key
@@ -70,13 +86,13 @@ JWT_SECRET=your_secret_key
 npx prisma migrate dev
 ```
 
-### 6. Start the project
+### 6. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Now open:
+Open your browser:
 
 ```
 http://localhost:3000
@@ -84,70 +100,72 @@ http://localhost:3000
 
 ---
 
-## Project Structure
+## Usage
 
-```
-app/
-│── dashboard/
-│── login/
-│── register/
-│── upload/
-│── vulnerabilities/
+1. Register a new account.
+2. Log in using your credentials.
+3. Access the protected dashboard.
+4. Upload a scan report.
+5. View vulnerability statistics.
+6. Search packages such as:
 
-lib/
-prisma/
-```
+- lodash
+- express
+- react
+- axios
+
+7. Filter vulnerabilities by severity.
 
 ---
 
-## API Used
+## API
 
-Google Open Source Vulnerabilities (OSV) API
+This project uses the Google Open Source Vulnerabilities (OSV) API.
 
+```
 https://api.osv.dev
+```
 
 ---
 
-## Future Improvements
+## Screenshots
 
-- Better dashboard design
-- Charts and graphs
-- File upload processing
-- Export reports
-- Dark mode
+### Login Page
 
----
+![Login](screenshots/login-page.jpg)
 
-# Screenshots
+### Register Page
 
-## Login Page
+![Register](screenshots/register-page.jpg)
 
-![Login](screenshots/login%20page.jpg)
+### Dashboard
 
----
+![Dashboard](screenshots/dashboard.jpg)
 
-## Dashboard
+### Upload Scan Report
 
-![Dashboard](screenshots/Dashboard%201.jpg)
+![Upload](screenshots/upload-page.jpg)
 
----
-
-## Upload Page
-
-![Upload](screenshots/Upload%20Page.jpg)
-
----
-
-## Vulnerabilities
+### Vulnerabilities
 
 ![Vulnerabilities](screenshots/vulnerabilities.jpg)
 
 ---
 
+## Future Improvements
+
+- Process uploaded scan reports automatically
+- Download vulnerability reports
+- Better charts and analytics
+- Dark mode support
+- User profile management
+
+---
+
 ## Author
 
-Akash Dhar Dubey
+**Akash Dhar Dubey**
 
-B.Tech CSE (AI & ML)
+B.Tech Computer Science (AI & ML)
 
 Ajeenkya DY Patil University

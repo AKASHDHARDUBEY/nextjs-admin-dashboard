@@ -32,7 +32,7 @@ export default function UploadPage() {
                             method: "POST",
                         });
 
-                        alert("Demo vulnerabilities uploaded!");
+                        alert("Scan report uploaded successfully.");
                     }}
                     style={{
                         padding: "10px 20px",
